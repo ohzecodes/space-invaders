@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="uTF-8">
+    <title>Space.Invaders</title>
+    <script src='js/0.0style.js' defer></script>
+    <script src='js/0.1onloadscreen.js' defer></script>
+    <script src='js/1variable.js' defer></script>
+    <script src='js/2classes.js' defer></script>
+    <script src='js/3pushin.js' defer></script>
+    <script src='js/4invaders.js' defer></script>
+    <script src='js/6move.js' defer></script>
+    <script src='js/7main3.js' defer></script>
+    <script src='js/7nmove.js' defer></script>
+    <script src='js/7Ofindandlauch.js' defer></script>
+    <script src='js/7pgameEssentials.js' defer></script>
+    <script src='js/7zcheats.js' defer></script>
+    <script src='js/8launch.js' defer></script>
+    <script src='js/9btnplay.js' defer></script>
+    <script src='js/mobile.js' defer></script>
+
+
+    <style>
+        body {
+            zoom: 0.75;
+            background: white;
+            margin-left: 25%
+        }
+
+        #canv {
+            background: white;
+            width: 100%;
+            height: 610px;
+        }
+
+        #myCanvas {
+            background-color: black;
+            float: left;
+
+        }
+
+        #btnplay {
+            width: 10%;
+            height: 100px;
+
+            border: 10px solid black;
+            background: whitesmoke;
+        }
+
+        #v {
+            color: black;
+            font-size: 25px;
+            font-family: fantasy;
+        }
+
+        #myCanvas {
+            border: 5px dotted blueviolet
+        }
+
+        ul {
+            display: none
+        }
+
+        button {
+            background-color: black;
+            color: aliceblue;
+            border: none
+        }
+
+        #btnplay {
+            background-color: aliceblue;
+            color: black;
+            border: 5px solid blueviolet;
+        }
+
+        #r3s3t {
+            clear: left;
+        }
+
+        #mobilebtns button {
+            width: 50%;
+            margin: 10px;
+            padding: 2.5%;
+
+        }
+
+        #mobilebtns #moveright,
+        #mobilebtns #moveleft {
+            width: 25%;
+            margin: 0;
+        }
+
+        #mobilebtns #moveleft {
+            margin-left: 10px
+        }
+    </style>
+</head>
+
+<body onload="runo()">
+
+    <div id="canv">
+        <canvas id="myCanvas" width="800" height="605"></canvas>
+
+        <button id="btnplay">play</button>
+
+
+    </div>
+    <p>This game is exclusively design for Desktops, it may not work in mobile/tablet devices.</p>
+    <p id="r3s3t">press 1 to restart</p>
+    <p>version <span id="v">0</span> </p>
+
+    <div id="mobilebtns" hidden >
+        <button id="moveleft" disabled> l</button>
+        <button id="moveright" disabled>R</button>
+        <br>
+        <button id="shoot" disabled>shoot</button>
+
+    </div>
+
+    <button onclick="dark()">Turn lights off</button>
+    <button onclick="light()">turn on lights</button><br><br><br>
+    <button onclick="ref()"> references</button>
+    <button onclick="picref()"> Picture references</button><br>
+
+
+
+    <ul id="myref">
+        <li><a href="https://www.youtube.com/watch?v=T-HGdc8L-7w">classes </a></li>
+        <li><a href="https://www.youtube.com/watch?v=OFzs4unxVtU">move</a></li>
+        <li><a href="https://www.w3schools.com/tags/canvas_drawimage.asp">to load sprites</a></li>
+        <li><a href="https://www.youtube.com/watch?v=W1-ej3Wu5zg">not overlaping </a></li>
+
+    </ul>
+
+    <ol id=picref hidden>
+        <li><a href=" https://pixabay.com/vectors/invader-space-game-video-42007/">the invaders </a></li>
+        <li><a href=" https://pixabay.com/vectors/launcher-missile-orbiter-rocket-2028032/">therocket</a></li>
+
+
+    </ol>
+    <p>The code is a property of Mohammad Zafar. and it may not be copied in any form with the owner's prior permission.
+    </p>
+</body>
+
+</html>
