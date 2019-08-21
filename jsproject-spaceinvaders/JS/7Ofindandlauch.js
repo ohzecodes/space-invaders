@@ -33,6 +33,9 @@ function findI() {
 
 let downInterval;
 function ilaunch(r) {
+  try {
+    
+ 
   let missile2 = new missile('white', invaderArray[row][r].x, (invaderArray[row][r].y + 50))
   downInterval = setInterval(function () {
     if (missile2 != null) {
@@ -41,14 +44,16 @@ function ilaunch(r) {
       let stop = collision1(missile2);
       if (missile2.y > 600 || stop == true && missile2.y != null) {
         clearInterval(downInterval);
-        console.log("dead" + missile2);
+        // console.log("dead" + missile2);
         missile2 = null;
         findI();
       }
     }
 
 
-  }, 25);
+  }, 25); } catch (error) {
+    
+  }
 }
 function collision1(missile) {
   // console.log(missile.y);

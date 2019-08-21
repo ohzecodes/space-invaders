@@ -14,10 +14,14 @@ function playbtn() {
         display();
         imove();
         youwin();
+        
+        
     }, 60);
 
+   
     findI();
 }
+
 
 
 
