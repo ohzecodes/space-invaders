@@ -1,6 +1,6 @@
 //main.js
 
-document.getElementById('v').innerHTML = "5";
+
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 let canvaswidth = canvas.width - 50

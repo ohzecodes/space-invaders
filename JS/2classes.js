@@ -6,21 +6,21 @@ class invader {
         this.invaderimg = new Image();
         this.invaderimg.src = "./assets/invader.jpg"
         this.width = 50
-        this.hieght = 50
+        this.height = 50
 
     }
     displays() {
-        ctx.drawImage(this.invaderimg, this.x, this.y, this.width, this.hieght);
+        ctx.drawImage(this.invaderimg, this.x, this.y, this.width, this.height);
     }
 
 
 }
 class rocket {
-    constructor(x, y, width, hieght) {
+    constructor(x, y, width, height) {
         this.xr = x
         this.yr = y
         this.widthr = width
-        this.hieghtr = hieght
+        this.hieghtr = height
         this.rocketimg = new Image();
         this.rocketimg.src = "./assets/rocket.png"
         this.isalive = true

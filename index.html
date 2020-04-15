@@ -28,51 +28,48 @@
             margin-left: 25%
         }
 
-        #canv {
-            background: white;
-            width: 100%;
+        #canvdiv {
+            width: fit-content;
             height: 610px;
         }
 
         #myCanvas {
             background-color: black;
             float: left;
-
-        }
-
-        #btnplay {
-            width: 10%;
-            height: 100px;
-
-            border: 10px solid black;
-            background: whitesmoke;
-        }
-
-        #v {
-            color: black;
-            font-size: 25px;
-            font-family: fantasy;
-        }
-
-        #myCanvas {
+            z-index: 0;
+            position:absolute;
             border: 5px dotted blueviolet
         }
 
-        ul {
-            display: none
+        #btnplay {
+            font-size: large;
+            position: relative;
+            z-index: 1;
+            top: 300px;
+	        left: 300px;
+            width: 20%;
+            height: 100px;
+            background: white;
+            background-color: white;
+            border: none;
+            color: black;
+            border-radius: 3rem;
+        }
+
+        #v {
+            font-family: fantasy;
         }
 
         button {
             background-color: black;
             color: aliceblue;
-            border: none
+            border: none;
+            text-transform: capitalize;
         }
-
-        #btnplay {
-            background-color: aliceblue;
-            color: black;
-            border: 5px solid blueviolet;
+        a{
+            color: black;   
         }
+        
 
         #r3s3t {
             clear: left;
@@ -94,21 +91,28 @@
         #mobilebtns #moveleft {
             margin-left: 10px
         }
+
+        #lights > button{
+            height: 40px;
+            font-size: 15px;
+            border-radius: 10px;
+            text-transform: capitalize;
+        }
     </style>
 </head>
 
 <body onload="runo()">
 
-    <div id="canv">
+    <div id="canvdiv" >
         <canvas id="myCanvas" width="800" height="605"></canvas>
 
-        <button id="btnplay">play</button>
+        <button id="btnplay">Play</button>
 
 
     </div>
     <p>This game is exclusively design for Desktops, it may not work in mobile/tablet devices.</p>
     <p id="r3s3t">press 1 to restart</p>
-    <p>version <span id="v">0</span> </p>
+    <p>Version: <span id="v">6</span> </p>
 
     <div id="mobilebtns" hidden >
         <button id="moveleft" disabled> l</button>
@@ -117,15 +121,15 @@
         <button id="shoot" disabled>shoot</button>
 
     </div>
+    <div id=lights>
+    <button id=off onclick="dark()">Turn lights off</button>
+    <button id=on onclick="light()">turn on lights</button><br><br><br>
+    </div>
 
-    <button onclick="dark()">Turn lights off</button>
-    <button onclick="light()">turn on lights</button><br><br><br>
-    <button onclick="ref()"> references</button>
-    <button onclick="picref()"> Picture references</button><br>
+    <button class=btn onclick="ref()"> references</button>
+    <button class=btn onclick="picref()"> Picture references</button><br>
 
-
-
-    <ul id="myref">
+    <ul id="myref" hidden>
         <li><a href="https://www.youtube.com/watch?v=T-HGdc8L-7w">classes </a></li>
         <li><a href="https://www.youtube.com/watch?v=OFzs4unxVtU">move</a></li>
         <li><a href="https://www.w3schools.com/tags/canvas_drawimage.asp">to load sprites</a></li>
@@ -139,8 +143,7 @@
 
 
     </ol>
-    <p>The code is a property of Mo-ze. and it may not be copied in any form without the owner's prior permission.
-    </p>
+    <p>The code is a property of <a href="https://github.com/ohzecodes">ohzecodes<a>. </p>
 </body>
 
 </html>

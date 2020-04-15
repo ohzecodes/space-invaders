@@ -22,7 +22,10 @@ function playbtn() {
     findI();
 }
 
-
+window.onkeydown=(event) => {
+    event.preventDefault();
+    event.stopPropagation();  
+  }
 
 
 

@@ -2,13 +2,20 @@
 // this code runs the rocket's missile
 
 
+
+
 let mInterval = null;
-document.onkeyup = launch;
-function launch() {
+document.addEventListener("keyup",launch);
+function launch(event) {
+  
   if (document.getElementById("btnplay").disabled == true && therocket.isalive == true) {
+   
     if (event.code === "Space" && mInterval == null) {
+      
+      console.log("i")
       launchnew();
     }
+   
   }
 
 }

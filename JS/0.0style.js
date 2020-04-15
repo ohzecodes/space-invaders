@@ -1,12 +1,21 @@
-function dark() {
-    document.body.style.backgroundColor = 'black'
-    document.getElementById("canv").style.backgroundColor = 'black'
 
+var x=document.querySelectorAll(".btn")
+function dark() {
+    document.body.style.backgroundColor = 'black';
+    x.forEach(e=>{
+        e.style.color="black"
+       
+    })
+    document.getElementById('off').style.color="black"
 }
 function light() {
     document.body.style.backgroundColor = 'white';
-    document.getElementById("canv").style.backgroundColor = 'white'
-
+   
+    x.forEach(e=>{
+        e.style.color="white"
+       
+    })
+    document.getElementById('off').style.color="white"
 }
 function ref() {
     document.getElementById('myref').style.display = 'list-item'; 
