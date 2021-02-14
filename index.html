@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="uTF-8">
+  <head>
+    <meta charset="uTF-8" />
     <title>Space.Invaders</title>
-    <script  src='./JS/0.0style.js' type="text/javascript" defer></script>
-    <script src='./JS/0.1onloadscreen.js' type="text/javascript" defer></script>
-    <script src='./JS/1variable.js' type="text/javascript" defer></script>
-    <script src='./JS/2classes.js' type="text/javascript" defer></script>
-    <script src='./JS/3pushin.js' type="text/javascript" defer></script>
-    <script src='./JS/4invaders.js' type="text/javascript" defer></script>
-    <script src='./JS/6move.js' type="text/javascript" defer></script>
-    <script src='./JS/7main3.js' type="text/javascript" defer></script>
-    <script src='./JS/7nmove.js' type="text/javascript" defer></script>
-    <script src='./JS/7Ofindandlauch.js' type="text/javascript" defer></script>
-    <script src='./JS/7pgameEssentials.js' type="text/javascript" defer></script>
-    <script src='./JS/7zcheats.js' type="text/javascript" defer></script>
-    <script src='./JS/8launch.js' type="text/javascript" defer></script>
-    <script src='./JS/9btnplay.js' type="text/javascript" defer></script>
-    <script src='./JS/mobile.js' type="text/javascript" defer></script>
-
+    <script src="./JS/0.0style.js" type="text/javascript" defer></script>
+    <script src="./JS/0.1onloadscreen.js" type="text/javascript" defer></script>
+    <script src="./JS/1variable.js" type="text/javascript" defer></script>
+    <script src="./JS/2classes.js" type="text/javascript" defer></script>
+    <script src="./JS/3pushin.js" type="text/javascript" defer></script>
+    <script src="./JS/4invaders.js" type="text/javascript" defer></script>
+    <script src="./JS/6move.js" type="text/javascript" defer></script>
+    <script src="./JS/7main3.js" type="text/javascript" defer></script>
+    <script src="./JS/7nmove.js" type="text/javascript" defer></script>
+    <script src="./JS/7Ofindandlauch.js" type="text/javascript" defer></script>
+    <script
+      src="./JS/7pgameEssentials.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script src="./JS/7zcheats.js" type="text/javascript" defer></script>
+    <script src="./JS/8launch.js" type="text/javascript" defer></script>
+    <script src="./JS/9btnplay.js" type="text/javascript" defer></script>
+    <script src="./JS/mobile.js" type="text/javascript" defer></script>
 
     <style>
-        body {
-            zoom: 0.75;
-            background: white;
-            margin-left: 25%
-        }
+      body {
+        zoom: 0.75;
+        background: white;
+        margin-left: 25%;
+      }
 
-        #canvdiv {
-            width: fit-content;
-            height: 610px;
-        }
+      #canvdiv {
+        width: fit-content;
+        height: 610px;
+      }
 
-        #myCanvas {
-            background-color: black;
-            float: left;
-            z-index: 0;
-            position:absolute;
-            border: 5px dotted blueviolet
-        }
+      #myCanvas {
+        background-color: black;
+        float: left;
+        z-index: 0;
+        position: absolute;
+        border: 5px dotted blueviolet;
+        background-image: url(./assets/bg.jpg);
+      }
 
-        #btnplay {
-            font-size: large;
-            position: relative;
-            z-index: 1;
-            top: 300px;
-	        left: 300px;
-            width: 20%;
-            height: 100px;
-            background: white;
-            background-color: white;
-            border: none;
-            color: black;
-            border-radius: 3rem;
-        }
+      #btnplay {
+        font-size: large;
+        position: relative;
+        z-index: 1;
+        top: 300px;
+        left: 300px;
+        width: 200px;
+        height: 100px;
+        background: white;
+        background-color: white;
+        border: none;
+        color: black;
+        border-radius: 3rem;
+      }
 
-        #v {
-            font-family: fantasy;
-        }
+      #v {
+        font-family: fantasy;
+      }
 
-        button {
-            background-color: black;
-            color: aliceblue;
-            border: none;
-            text-transform: capitalize;
-        }
-        a{
-            color: black;   
-        }
-        
+      button {
+        background-color: black;
+        color: aliceblue;
+        border: none;
+        text-transform: capitalize;
+      }
+      a {
+        color: black;
+      }
 
-        #r3s3t {
-            clear: left;
-        }
+      #r3s3t {
+        clear: left;
+      }
 
-        #mobilebtns button {
-            width: 50%;
-            margin: 10px;
-            padding: 2.5%;
+      #mobilebtns button {
+        width: 50%;
+        margin: 10px;
+        padding: 2.5%;
+      }
 
-        }
+      #mobilebtns #moveright,
+      #mobilebtns #moveleft {
+        width: 25%;
+        margin: 0;
+      }
 
-        #mobilebtns #moveright,
-        #mobilebtns #moveleft {
-            width: 25%;
-            margin: 0;
-        }
+      #mobilebtns #moveleft {
+        margin-left: 10px;
+      }
 
-        #mobilebtns #moveleft {
-            margin-left: 10px
-        }
-
-        #lights > button{
-            height: 40px;
-            font-size: 15px;
-            border-radius: 10px;
-            text-transform: capitalize;
-        }
+      #lights > button {
+        height: 40px;
+        font-size: 15px;
+        border-radius: 10px;
+        text-transform: capitalize;
+      }
     </style>
-</head>
+  </head>
 
-<body onload="runo()">
-
-    <div id="canvdiv" >
-        <canvas id="myCanvas" width="800" height="605"></canvas>
-
-        <button id="btnplay">Play</button>
-
-
+  <body onload="runo()">
+    <div id="canvdiv">
+      <canvas id="myCanvas" width="800" height="605"></canvas>
+      <button hidden id="btnplay">Play</button>
+      <h2 class="bottom-left">Do you have what it takes to save the world</h2>
     </div>
-    <p>This game is exclusively design for Desktops, it may not work in mobile/tablet devices.</p>
+
+    <p>
+      This game is exclusively design for Desktops, it may not work in
+      mobile/tablet devices.
+    </p>
     <p id="r3s3t">press 1 to restart</p>
-    <p>Version: <span id="v">6</span> </p>
 
-    <div id="mobilebtns" hidden >
-        <button id="moveleft" disabled> l</button>
-        <button id="moveright" disabled>R</button>
-        <br>
-        <button id="shoot" disabled>shoot</button>
-
+    <div id="mobilebtns" hidden>
+      <button id="moveleft" disabled>Left</button>
+      <button id="moveright" disabled>Right</button>
+      <br />
+      <button id="shoot" disabled>shoot</button>
     </div>
-    <div id=lights>
-    <button id=off onclick="dark()">Turn lights off</button>
-    <button id=on onclick="light()">turn on lights</button><br><br><br>
+    <div id="lights">
+      <button id="off" onclick="dark()">Dark mode</button>
+      <button id="on" onclick="light()">Light mode</button><br /><br /><br />
     </div>
 
     <button class=btn onclick="ref()"> references</button>
@@ -144,6 +144,11 @@
 
     </ol>
     <p>The code is a property of <a href="https://github.com/ohzecodes">ohzecodes<a>. </p>
-</body>
-
+  </body>
 </html>
+
+
+
+
+
+
