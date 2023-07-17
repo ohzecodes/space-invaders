@@ -27,68 +27,40 @@ const setLight =(lightsOn) => {
       e.style.color = Colors.foreground;
     })
   }
+  const h2=document.querySelector("#lights > h2")
   if(lightsOn){
     const LightColors={
       background: "#f0f0f0",
       foreground:  "#333",
       nextLevel: "#fff"
-      
     }
     setStyle(LightColors)
+     h2.textContent="Dark Mode: Off"
     return;
   }
+ 
   const DarkColors={
     background:  "#333",
     foreground: "#f0f0f0",
     nextLevel:"#000"
   }
   setStyle(DarkColors)
-  
+   // h2+ on
+   h2.textContent="Dark Mode: On"
 }
 
 const autoDetectTheme=() => {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    setLight(false);
-    lightCheckBox.checked=false ;
-    
-    } else {
-    setLight(true);
-    lightCheckBox.checked=true;
+     lightCheckBox.checked=true;
+       } else {
+    lightCheckBox.checked=false;
     }
+  setLight(!lightCheckBox.checked);
 }
-
-
 autoDetectTheme();
-lightCheckBox.addEventListener("change",()=>setLight(lightCheckBox.checked));
+lightCheckBox.addEventListener("change",()=>setLight(!lightCheckBox.checked));
 
 
-function isMobileOrTablet() {
-  var userAgent = navigator.userAgent.toLowerCase();
-  var isMobile = /mobile|android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-  var isTablet = /tablet|ipad/i.test(userAgent);
-  return (isMobile || isTablet);
-}
 
 
-  if (isMobileOrTablet()){
-    const InnerContent =document.createElement("div");
-
-    const overlayDiv= document.getElementById("overlay");
-    InnerContent.innerHTML=`<p>We have detected that you're using a mobile device.</p>
-     <p>The game is NOT optimized for mobile devices</p>`
-
-    overlayDiv.appendChild(InnerContent);
-    overlayDiv.style.display = "block";
-   
-    setTimeout(() => {
-     let p= document.createElement("p");
-      p.textContent= "Tap anywhere to continue"
-      InnerContent.appendChild(p);
-      p.classList.add("blink");
-      overlayDiv.onclick=() => {
-        overlayDiv.style.display = "none";
-      }
-    },2000);
-  }
-  
 
