@@ -1,12 +1,13 @@
-// btnplay.js
+// playButton.js
 
-document.getElementById("btnplay").onclick = playbtn;
+play.onclick = playbtn;
 // canvas.addEventListener('click', playbtn);
 let gameInterval;
 function playbtn() {
+  gameOrStoryRunning();
   //   canvas.style.backgroundImage = "";
-  document.getElementById("btnplay").disabled = true;
-  document.getElementById("btnplay").style.display = "none";
+  play.disabled = true;
+  play.style.display = "none";
 
   gameInterval = setInterval(function () {
     display();

@@ -5,7 +5,7 @@ let mInterval = null;
 document.addEventListener("keyup", launch);
 function launch(event) {
   if (
-    document.getElementById("btnplay").disabled == true &&
+    document.getElementById("playButton").disabled == true &&
     therocket.isalive == true
   ) {
     if (event.code === "Space" && mInterval == null) {

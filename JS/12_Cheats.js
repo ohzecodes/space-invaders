@@ -1,7 +1,7 @@
 //cheats
 
 function quickwipe(rowy) {
-  if (document.getElementById("btnplay").disabled != false) {
+  if (document.getElementById("playButton").disabled != false) {
     for (let i = 0; i < invaderArray.length; i++) {
       for (let j = 0; j < invaderArray[i].length; j++) {
         invaderArray[rowy][j] = -1;
@@ -11,7 +11,7 @@ function quickwipe(rowy) {
   }
 }
 function quickwin() {
-  if (document.getElementById("btnplay").disabled != false) {
+  if (document.getElementById("playButton").disabled != false) {
     for (let i = 0; i < invaderArray.length; i++) {
       for (let j = 0; j < invaderArray[i].length; j++) {
         invaderArray[i][j] = -1;
@@ -21,7 +21,7 @@ function quickwin() {
   }
 }
 function stop() {
-  if (document.getElementById("btnplay").disabled == true) {
+  if (document.getElementById("playButton").disabled == true) {
     therocket.isalive = false;
     canvas.width = canvas.width
     clear();
