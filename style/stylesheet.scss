@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+$background: #f0f0f0;
+$foreground: #333;
+$canvasWidth: 850px;
+
+@mixin accentuate {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  &:hover {
+    border-bottom: 5px solid;
+  }
+}
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+  height: fit-content;
+  > * {
+    margin: auto;
+    height: fit-content;
+  }
+}
+body {
+  margin: 0;
+  zoom: 1;
+  background-color: $background;
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+}
+#wrapper {
+  width: fit-content;
+  width: $canvasWidth;
+  margin: auto;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+
+  #sign {
+    margin: 0;
+    a::before {
+      content: "@";
+    }
+    a {
+      @include accentuate();
+      padding: 50px;
+    }
+    height: fit-content;
+    display: flex;
+    text-transform: uppercase;
+    width: 200px;
+    text-align: center;
+  }
+
+  details {
+    summary {
+      @include accentuate();
+      text-decoration: underline;
+      margin: 0;
+      padding: 50px;
+    }
+    &[open] summary {
+      padding-bottom: 0;
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+
+    ul li {
+      padding: 5px;
+      a {
+        color: $foreground;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+#canvasDiv {
+  padding: 50px 0;
+  width: max-content;
+  height: 605px;
+  position: relative;
+  #myCanvas {
+    width: $canvasWidth;
+    height: 605px;
+    background-color: black;
+    margin: auto;
+    border: 5px dotted blueviolet;
+    background-image: url(../assets/bg.jpg);
+  }
+
+  #playButton {
+    @include accentuate();
+    &:hover {
+      text-decoration: underline;
+    }
+    font-size: larger;
+    position: absolute;
+    z-index: 1;
+    bottom: 150px;
+    left: 300px;
+    width: 200px;
+    height: 100px;
+    color: lighten($color: $background, $amount: 20);
+    border: 5px solid $background;
+    border-radius: 100px;
+    background-color: rgba($background, 0.3);
+  }
+}
+summary,
+h2 {
+  font-size: 2rem;
+}
+#resetText {
+  width: 800px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@import "./Overlay";
+@import "./toggleButton";
+

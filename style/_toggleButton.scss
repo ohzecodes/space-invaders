@@ -1,0 +1,62 @@
+$offColor: #ccc;
+$onColor: #2196f3;
+$squareColor: white;
+
+
+section.toggle {
+  justify-content: space-around;
+  display: flex;
+  width: 800px;
+  .switchDiv {
+    display: flex;
+    align-items: center;
+    h2 {
+      margin-right: 3rem;
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  input {
+    display: none;
+  }
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $offColor;
+  transition: 0.4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $squareColor;
+    transition: 0.4s;
+  }
+}
+
+input {
+  &:checked + .slider {
+    background-color: $onColor;
+  }
+
+  &:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  &:checked + .slider:before {
+    transform: translateX(26px);
+  }
+}

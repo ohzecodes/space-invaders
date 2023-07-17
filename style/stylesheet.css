@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+header {
+  display: flex;
+  justify-content: space-around;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header > * {
+  margin: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body {
+  margin: 0;
+  zoom: 1;
+  background-color: #f0f0f0;
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+}
+
+#wrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 850px;
+  margin: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer #sign {
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  text-transform: uppercase;
+  width: 200px;
+  text-align: center;
+}
+footer #sign a::before {
+  content: "@";
+}
+footer #sign a {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 50px;
+}
+footer #sign a:hover {
+  border-bottom: 5px solid;
+}
+footer details {
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+}
+footer details summary {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 0;
+  padding: 50px;
+}
+footer details summary:hover {
+  border-bottom: 5px solid;
+}
+footer details[open] summary {
+  padding-bottom: 0;
+}
+footer details[open] summary:hover {
+  border-bottom: 0;
+}
+footer details ul li {
+  padding: 5px;
+}
+footer details ul li a {
+  color: #333;
+  text-transform: capitalize;
+}
+
+#canvasDiv {
+  padding: 50px 0;
+  width: -moz-max-content;
+  width: max-content;
+  height: 605px;
+  position: relative;
+}
+#canvasDiv #myCanvas {
+  width: 850px;
+  height: 605px;
+  background-color: black;
+  margin: auto;
+  border: 5px dotted blueviolet;
+  background-image: url(../assets/bg.jpg);
+}
+#canvasDiv #playButton {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: larger;
+  position: absolute;
+  z-index: 1;
+  bottom: 150px;
+  left: 300px;
+  width: 200px;
+  height: 100px;
+  color: white;
+  border: 5px solid #f0f0f0;
+  border-radius: 100px;
+  background-color: rgba(240, 240, 240, 0.3);
+}
+#canvasDiv #playButton:hover {
+  border-bottom: 5px solid;
+}
+#canvasDiv #playButton:hover {
+  text-decoration: underline;
+}
+
+summary,
+h2 {
+  font-size: 2rem;
+}
+
+#resetText {
+  width: 800px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(64, 41, 41, 0.8);
+  z-index: 999;
+}
+#overlay > * {
+  margin-top: 300px;
+  font-size: 50px;
+  color: white;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blink {
+  animation: blink 3s infinite;
+}
+
+section.toggle {
+  justify-content: space-around;
+  display: flex;
+  width: 800px;
+}
+section.toggle .switchDiv {
+  display: flex;
+  align-items: center;
+}
+section.toggle .switchDiv h2 {
+  margin-right: 3rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}/*# sourceMappingURL=stylesheet.css.map */

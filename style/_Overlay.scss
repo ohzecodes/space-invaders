@@ -1,0 +1,35 @@
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(64, 41, 41, 0.8);
+  z-index: 999;
+  >* {
+    margin-top: 300px;
+    font-size: 50px;
+    color: white;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 3s infinite;
+}
