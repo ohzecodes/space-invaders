@@ -103,6 +103,7 @@ footer details ul li a {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
+  cursor: pointer;
   font-size: larger;
   position: absolute;
   z-index: 1;
@@ -221,4 +222,4 @@ input:focus + .slider {
 }
 input:checked + .slider:before {
   transform: translateX(26px);
-}/*# sourceMappingURL=stylesheet.css.map */
+} /*# sourceMappingURL=stylesheet.css.map */

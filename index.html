@@ -3,91 +3,93 @@
   <head>
     <meta charset="uTF-8" />
     <title>Space.Invaders</title>
-    <script src="./JS/00_MobileDetection.js"  defer></script>
-    <script src="./JS/01_Style.js"  defer></script>
-    <script src="./JS/02_OnLoadScreen.js"  defer></script>
-    <script src="./JS/03_Variables.js"  defer></script>
-    <script src="./JS/04_Classes.js"  defer></script>
-    <script src="./JS/05_PushIn.js"  defer></script>
-    <script src="./JS/06_Invaders.js"  defer></script>
-    <script src="./JS/07_MoveShip.js"  defer></script>
-    <script src="./JS/08_Main3.js"  defer></script>
-    <script src="./JS/09_Move.js"  defer></script>
-    <script src="./JS/10_FindAndLauch.js"  defer></script>
-    <script src="./JS/11_GameEssentials.js"  defer></script>
-    <script src="./JS/12_Cheats.js"  defer></script>
-    <script src="./JS/13_Launch.js"  defer></script>
-    <script src="./JS/14_ButtonPlay.js"  defer></script>
-     <link rel="stylesheet" href="./style/stylesheet.css" />
+    <link rel="stylesheet" href="./style/stylesheet.css" />
+    <link rel="icon" href="favicon.ico" />
+    <script src="./JS/01_Variables.js" defer></script>
+    <script src="./JS/02_MobileDetection.js" defer></script>
+    <script src="./JS/03_Style.js" defer></script>
+    <script src="./JS/04_OnLoadScreen.js" defer></script>
+    <script src="./JS/05_Classes.js" defer></script>
+    <script src="./JS/06_Invaders.js" defer></script>
+    <script src="./JS/07_MoveShip.js" defer></script>
+    <script src="./JS/08_Main3.js" defer></script>
+    <script src="./JS/09_MoveInvaaders.js" defer></script>
+    <script src="./JS/10_FindAndLauch.js" defer></script>
+    <script src="./JS/11_GameEssentials.js" defer></script>
+    <script src="./JS/12_Cheats.js" defer></script>
+    <script src="./JS/13_Launch.js" defer></script>
+    <script src="./JS/14_ButtonPlay.js" defer></script>
   </head>
 
   <body>
-<header>
-  <h1>Space Invaders</h1>
-  <section class="toggle">
-    <div id="lights" class="switchDiv">
-      <h2>Dark Mode</h2>
+    <header>
+      <h1>Space Invaders</h1>
+      <section class="toggle">
+        <div id="lights" class="switchDiv">
+          <h2>Dark Mode</h2>
 
-      <label class="switch">
-        <input type="checkbox" id="LightsCheckBox" />
-        <span class="slider"></span>
-      </label>
-    </div>
+          <label class="switch">
+            <input type="checkbox" id="LightsCheckBox" />
+            <span class="slider"></span>
+          </label>
+        </div>
 
-    <div id="storyMode" class="switchDiv">
-      <h2>Story Mode</h2>
+        <div id="storyMode" class="switchDiv">
+          <h2>Story Mode</h2>
 
-      <label class="switch">
-        <input type="checkbox" id="storyModeCheckBox" />
-        <span class="slider"></span>
-      </label>
-    </div>
-  </section> 
-</header>
-  <div id="overlay"></div>
+          <label class="switch">
+            <input type="checkbox" id="storyModeCheckBox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+    </header>
+    <div id="overlay"></div>
     <main id="wrapper">
-    <div id="canvasDiv">
-      <canvas id="myCanvas" width="850" height="605"></canvas>
-      <button id="playButton">Play</button>
+      <div id="canvasDiv">
+        <canvas id="myCanvas" width="850" height="605"></canvas>
+        <button id="playButton">Play</button>
       </div>
-    <p id="resetText">Press 1 To Restart</p>
-  </main>
-  
+      <p id="resetText">Press 1 To Restart</p>
+    </main>
 
- <footer>
-    <details>
-      <summary>References</summary>
-      <ul id="myref">
-        <li>
-          <a href="https://www.youtube.com/watch?v=T-HGdc8L-7w">classes </a>
-        </li>
-        <li><a href="https://www.youtube.com/watch?v=OFzs4unxVtU">move</a></li>
-        <li>
-          <a href="https://www.w3schools.com/tags/canvas_drawimage.asp"
-            >to load sprites</a
-          >
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=W1-ej3Wu5zg"
-            >not overlaping
-          </a>
-        </li>
-        <li>
-          <a href=" https://pixabay.com/vectors/invader-space-game-video-42007/"
-            >the invaders
-          </a>
-        </li>
-        <li>
-          <a
-            href=" https://pixabay.com/vectors/launcher-missile-orbiter-rocket-2028032/"
-            >the rocket</a
-          >
-        </li>
-      </ul>
-    </details>
-    <p id="sign">
-      <a href="https://github.com/ohzecodes/spaceinvaders">github</a>
-    </p> 
-</footer>
- </body>
+    <footer>
+      <details>
+        <summary>References</summary>
+        <ul id="myref">
+          <li>
+            <a href="https://www.youtube.com/watch?v=T-HGdc8L-7w">classes </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=OFzs4unxVtU">move</a>
+          </li>
+          <li>
+            <a href="https://www.w3schools.com/tags/canvas_drawimage.asp"
+              >to load sprites</a
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=W1-ej3Wu5zg"
+              >not overlaping
+            </a>
+          </li>
+          <li>
+            <a
+              href=" https://pixabay.com/vectors/invader-space-game-video-42007/"
+              >the invaders
+            </a>
+          </li>
+          <li>
+            <a
+              href=" https://pixabay.com/vectors/launcher-missile-orbiter-rocket-2028032/"
+              >the rocket</a
+            >
+          </li>
+        </ul>
+      </details>
+      <p id="sign">
+        <a href="https://github.com/ohzecodes/spaceinvaders">github</a>
+      </p>
+    </footer>
+  </body>
 </html>

@@ -1,26 +1,16 @@
-//main.js
+// Start of File: 08_Main3.js
 
-
-let canvas = document.getElementById("myCanvas");
-let ctx = canvas.getContext("2d");
-let canvaswidth = canvas.width - 50
-
-
-let therocket = new rocket(xposrocket, 500, 50, 50)
+const theRocket = new Rocket(horizontalRocketPosition, 500, 50, 50);
 
 function display() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  displayInvader();
-  if (therocket.isalive == true) {
-    therocket.displays();
+  displayInvaders();
+  if (theRocket.isDead()) {
+    theRocket.die();
+  } else {
+    theRocket.show();
   }
-  else if (therocket.isalive == false) {
-    therocket.isdead()
-  }
-
 }
 
-
-
-
+//End of File: 08_Main3.js

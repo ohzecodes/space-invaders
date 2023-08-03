@@ -1,24 +1,26 @@
-// playButton.js
+// Start of File: 14_ButtonPlay.js
 
-play.onclick = playbtn;
-// canvas.addEventListener('click', playbtn);
 let gameInterval;
-function playbtn() {
+function playBtnFn() {
   gameOrStoryRunning();
-  //   canvas.style.backgroundImage = "";
-  play.disabled = true;
-  play.style.display = "none";
 
-  gameInterval = setInterval(function () {
+  playButton.disabled = true;
+  playButton.style.display = "none";
+
+  gameInterval = setInterval(() => {
     display();
-    imove();
-    youwin();
+    movingInvaders();
+    youWin();
   }, 60);
 
-  findI();
+  findInvaderForMissileLaunch();
 }
 
 window.onkeydown = (event) => {
   event.preventDefault();
   event.stopPropagation();
 };
+
+playButton.onclick = playBtnFn;
+
+//End of File: 14_ButtonPlay.js

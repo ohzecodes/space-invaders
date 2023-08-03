@@ -1,21 +1,13 @@
-// move.js
+// Start of File: 07_MoveShip.js
 
-document.addEventListener("keydown",movingRocket) ;
 function movingRocket(event) {
-
-    if (event.key == "ArrowRight") {
-        event.preventDefault();
-        therocket.moveright()
-
-    }
-    else if (event.key == "ArrowLeft") {
-        event.preventDefault();
-        therocket.moveleft();
-    }
-    else if (event.code === "Digit1") {
-        event.preventDefault();
-        location.reload();
-    }
-
+  event.preventDefault();
+  if (event.key === "ArrowRight") {
+    theRocket.moveRight();
+  } else if (event.key === "ArrowLeft") {
+    theRocket.moveLeft();
+  }
 }
+document.addEventListener("keydown", movingRocket);
 
+//End of File: 07_MoveShip.js
